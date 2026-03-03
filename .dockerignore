@@ -1,10 +1,20 @@
-# Don't include these in the Docker image
-data/
+# Ignore Git repo
 .git/
 .gitignore
+
+# Ignore documentation
 *.md
 README.md
-docker-compose.yml
+
+# Ignore environment files (optional)
 .env
+
+# Ignore logs and archives
 *.log
 *.zip
+
+# Ignore docker-compose (not needed in image)
+docker-compose.yml
+
+# DO NOT ignore .htaccess
+# DO NOT ignore dotfiles globally
