@@ -19,8 +19,8 @@ RUN echo 'memory_limit = 512M' > /usr/local/etc/php/conf.d/docker-php.ini && \
 # Enable Apache modules required for .htaccess
 RUN a2enmod rewrite headers expires deflate
 
-# Allow .htaccess overrides globally
-RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
+# Replace default vhost with our custom one
+COPY apache-vhost.conf /etc/apache2/sites-available/000-default.conf
 
 # Copy project files
 WORKDIR /var/www/html
