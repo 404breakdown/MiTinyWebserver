@@ -2,10 +2,24 @@
 
 # 🚀 Features
 
-    Engine: PHP 8.2-Apache (Debian-based).
+- Engine: PHP 8.2-Apache (Debian-based).
+- Database: Pre-configured with PDO and PDO_SQLite.
+- High Capacity: Optimized for large uploads (up to 1GB).
+- Automation: Integrated GitHub Actions for automatic builds to Docker Hub.
 
-    Database: Pre-configured with PDO and PDO_SQLite.
+# 🛠️ Configuration
 
-    High Capacity: Optimized for large uploads (up to 1GB).
+This image is tuned for heavy-duty web tasks with the following PHP settings:
 
-    Automation: Integrated GitHub Actions for automatic builds to Docker Hub.
+Setting	Value
+memory_limit	512M
+upload_max_filesize	1G
+post_max_size	1.1G
+max_execution_time	300s
+
+# 📦 Local Setup
+
+To run this project locally using Docker:
+clone the repo 
+`git clone https://github.com/404breakdown/mytinywebserver.git
+cd the-archive`
